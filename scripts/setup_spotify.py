@@ -2,12 +2,11 @@
 
     python scripts/setup_spotify.py
 
-Paste your Client ID and Client Secret when asked (the secret stays hidden),
+Paste your Client ID and Client Secret when asked,
 log in to Spotify in the browser that opens, and the three GitHub secrets
 are saved for you. Nothing is printed or written to disk.
 """
 import base64
-import getpass
 import http.server
 import json
 import subprocess
@@ -20,7 +19,7 @@ REDIRECT = "http://127.0.0.1:8888/callback"
 SCOPES = "user-read-currently-playing user-read-recently-played"
 
 cid = input("Spotify Client ID: ").strip()
-secret = getpass.getpass("Spotify Client Secret (hidden): ").strip()
+secret = input("Spotify Client Secret: ").strip()
 code = {}
 
 
