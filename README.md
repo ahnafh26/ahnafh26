@@ -3,7 +3,9 @@
 uwaterloo math + laurier bba double degree. i build tools that make student life less chaotic.
 
 <!--now:start-->
-🎧 last played: [Jungle](https://open.spotify.com/track/7JXZq0JgG2zTrSOAgY8VMC) by Drake · 📍 1st year @ uwaterloo × laurier
+📍 1st year @ uwaterloo × laurier
+
+<a href="https://open.spotify.com/track/2WP8G2pdddDmnh1xbfKBOI"><img src="assets/now-playing.svg" alt="listening to: Finesse by Drake" width="420"></a>
 <!--now:end-->
 
 **right now:**
