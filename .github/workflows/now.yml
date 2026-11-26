@@ -25,6 +25,7 @@ jobs:
         run: |
           git config user.name "now-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git diff --quiet && exit 0
-          git commit -am "update now"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "update now"
           git push
