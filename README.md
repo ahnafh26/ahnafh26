@@ -3,7 +3,7 @@
 uwaterloo math + laurier bba double degree. i build tools that make student life less chaotic.
 
 <!--now:start-->
-📍 1st year @ uwaterloo × laurier
+⚡ last commit: "fix: skip sign photos filed as brand logos on Wikidata" in [grand-theft-goose](https://github.com/ahnafh26/grand-theft-goose) (4 days ago) · 📍 1st year @ uwaterloo × laurier
 <!--now:end-->
 
 **right now:**
