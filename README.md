@@ -17,15 +17,6 @@ uwaterloo math + laurier bba double degree. i build tools that make student life
 - 🧠 swe @ **FschoolAI**: built the RAG-powered AI tutor for 130k+ students
 - 🎓 founding fellow @ **The Graduates Project**: built Ascend, student guidance for Ontario schools
 
-### Tech Stack
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+<img src="assets/stack.svg" alt="tech stack: Python, TypeScript, React, Next.js, FastAPI, Node.js, PostgreSQL, Git" width="420">
 
 **find me:** 📫 [ahnafhanif2008@gmail.com](mailto:ahnafhanif2008@gmail.com) · linkedin: [ahnafhanif1](https://www.linkedin.com/in/ahnafhanif1/)
