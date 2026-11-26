@@ -3,7 +3,7 @@
 uwaterloo math + laurier bba double degree. i build tools that make student life less chaotic.
 
 <!--now:start-->
-📍 1st year @ uwaterloo × laurier
+🎧 last played: [Jungle](https://open.spotify.com/track/7JXZq0JgG2zTrSOAgY8VMC) by Drake · 📍 1st year @ uwaterloo × laurier
 <!--now:end-->
 
 **right now:**
