@@ -21,8 +21,8 @@ STACK = [
     ("Git", "git", "#F05032"),
 ]
 
-W, PAD, GAP = 420, 14, 8
-PILL_H, ICON, FONT = 30, 14, 12.5
+PAD, GAP = 14, 8
+PILL_H, ICON, FONT = 32, 15, 13.5
 TOP = 40  # space for the label
 
 
@@ -39,11 +39,10 @@ def icon_path(slug):
 
 
 def main():
+    # one row across the page, like the old badges; the card is as wide as the row
     pills, x, y = [], PAD, TOP
     for name, slug, color in STACK:
         w = 10 + ICON + 7 + text_width(name) + 12
-        if x + w > W - PAD:
-            x, y = PAD, y + PILL_H + GAP
         s = ICON / 24
         pills.append(
             f'<g transform="translate({x:.1f},{y})">'
@@ -54,6 +53,7 @@ def main():
         )
         x += w + GAP
     h = y + PILL_H + PAD
+    W = round(x - GAP + PAD)
 
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img" aria-label="tech stack: {', '.join(n for n, _, _ in STACK)}">
   <defs>
