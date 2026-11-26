@@ -5,52 +5,16 @@ import os
 import re
 import urllib.parse
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date
 
-USER = "ahnafh26"
 START_YEAR = 2026  # first fall term at uwaterloo / laurier
 README = "README.md"
-SKIP_MESSAGES = {"update now"}  # this bot's own commits
-
-
-def api(path):
-    req = urllib.request.Request(f"https://api.github.com{path}")
-    req.add_header("Accept", "application/vnd.github+json")
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return json.load(r)
 
 
 def clean(msg, limit=60):
     msg = msg.strip().splitlines()[0] if msg.strip() else ""
     msg = re.sub(r"[`*_\[\]<>|]", "", msg)  # keep markdown from breaking
     return msg if len(msg) <= limit else msg[: limit - 1].rstrip() + "…"
-
-
-def latest_commit():
-    """Newest public push by USER, skipping this profile repo's bot commits."""
-    for ev in api(f"/users/{USER}/events/public?per_page=50"):
-        if ev.get("type") != "PushEvent":
-            continue
-        repo = ev["repo"]["name"]
-        p = ev.get("payload", {})
-        msg = None
-        commits = p.get("commits") or []
-        if commits:
-            msg = commits[-1].get("message")
-        elif p.get("head"):  # newer payloads only carry the head sha
-            try:
-                msg = api(f"/repos/{repo}/commits/{p['head']}")["commit"]["message"]
-            except Exception:
-                continue
-        msg = clean(msg or "")
-        if not msg or msg.lower() in SKIP_MESSAGES:
-            continue
-        when = datetime.fromisoformat(ev["created_at"].replace("Z", "+00:00"))
-        return msg, repo, when
-    return None
 
 
 def spotify_track():
@@ -88,15 +52,6 @@ def spotify_track():
     return clean(item["name"], 40), clean(artist, 30), url, playing
 
 
-def ago(when):
-    days = (datetime.now(timezone.utc) - when).days
-    if days <= 0:
-        return "today"
-    if days == 1:
-        return "yesterday"
-    return f"{days} days ago"
-
-
 def year_of_study(today=None):
     today = today or date.today()
     # the school year starts in september
@@ -109,15 +64,6 @@ def ordinal(n):
 
 def build_line():
     parts = []
-    try:
-        c = latest_commit()
-    except Exception as e:  # API hiccup: keep the rest of the line
-        print(f"commit lookup failed: {e}")
-        c = None
-    if c:
-        msg, repo, when = c
-        name = repo.split("/", 1)[1]
-        parts.append(f'⚡ last commit: "{msg}" in [{name}](https://github.com/{repo}) ({ago(when)})')
     try:
         t = spotify_track()
     except Exception as e:
