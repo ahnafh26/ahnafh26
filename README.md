@@ -5,7 +5,7 @@ uwaterloo math + laurier bba double degree. i build tools that make student life
 <!--now:start-->
 📍 1st year @ uwaterloo × laurier
 
-<a href="https://open.spotify.com/track/6FSfKDj6xMdvoHzmkKNNQx"><img src="assets/now-playing.svg" alt="last played: SPIDER-MAN SUPERMAN by PARTYNEXTDOOR, Drake" width="420"></a>
+<a href="https://open.spotify.com/track/3GCdLUSnKSMJhs4Tj6CV3s"><img src="assets/now-playing.svg" alt="last played: All The Stars (with SZA) - From &quot;Black Panther: The Album&quot; by Kendrick Lamar, SZA" width="420"></a>
 <!--now:end-->
 
 **right now:**
